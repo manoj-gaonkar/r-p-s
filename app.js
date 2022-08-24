@@ -7,6 +7,7 @@ const result_div = document.querySelector(".winner");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissor_div = document.getElementById("s");
+var c = "";
 
 
 main();
@@ -70,7 +71,9 @@ function win(userChoice,ComputerChoice){
     result_div.innerHTML = convertoword(userChoice)+" beats " + convertoword(ComputerChoice)+ ". You Won ";
     ScoreBoard.style.border = "#00ff08 solid ";
     ScoreBoard.classList.add("normal-fade");
-
+    if (userScore == 10) {
+        final("u");
+    }
 }
 
 function lose(userChoice,ComputerChoice){
@@ -80,11 +83,30 @@ function lose(userChoice,ComputerChoice){
     computerScore_span.innerHTML = computerScore ;
     result_div.innerHTML = convertoword(userChoice)  + " beats " + convertoword(ComputerChoice) + ". You lose";
     ScoreBoard.style.border = "#d90d0d solid";
+    if (computerScore == 10) {
+        final("c");
+    }
 }
 
 function draw(userChoice,ComputerChoice){
     console.log (" ok you go");
     result_div.innerHTML = convertoword(userChoice) + " beats " + convertoword(ComputerChoice) + ". Its a Draw";
+}
+
+function final(c) {
+    console.log("ok"+c);
+    if (c == "c") {
+        result_div.innerHTML = "COMPUTER WINS";
+    }
+    else if(c=="u"){
+        result_div.innerHTML = "YOU WIN";
+    }
+
+    c=""
+    computerScore = 0;
+    userScore = 0;
+    computerScore_span.innerHTML = 0;
+    userScore_span.innerHTML = 0;
 }
 
 
