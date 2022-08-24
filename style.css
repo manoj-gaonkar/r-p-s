@@ -62,6 +62,7 @@ header > h2{
 
 .selection{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     flex: 1 1 12px;
 }
@@ -81,7 +82,7 @@ header > h2{
     background: rgb(255, 255, 255);
     color: rgb(39, 25, 63);
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.116) ;
-    transform: scale(1.033);
+    transform: scale(1.05);
 }
 
 .make-move{
