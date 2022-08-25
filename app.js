@@ -7,6 +7,10 @@ const result_div = document.querySelector(".winner");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissor_div = document.getElementById("s");
+const userlabel = document.getElementById('user-label');
+const computerlabel = document.getElementById('computer-label');
+var body = document.getElementById('body');
+var modes = document.getElementById('mode');
 var c = "";
 
 
@@ -83,15 +87,25 @@ function lose(userChoice,ComputerChoice){
     computerScore_span.innerHTML = computerScore ;
     result_div.innerHTML = convertoword(userChoice)  + " beats " + convertoword(ComputerChoice) + ". You lose";
     ScoreBoard.style.border = "#d90d0d solid";
+    // label color changing
+    window.setTimeout(labelcolor, 3000);
     if (computerScore == 10) {
         final("c");
     }
 }
 
+function labelcolor() {
+    computerlabel.classList.add("bg-red-500");
+}
+
 function draw(userChoice,ComputerChoice){
     console.log (" ok you go");
     result_div.innerHTML = convertoword(userChoice) + " beats " + convertoword(ComputerChoice) + ". Its a Draw";
+    ScoreBoard.style.border = "#f2cb1b solid";
+    userlabel.classList.add('bg-purple-400')
+    computerlabel.classList.add("bg-purple-400");
 }
+ 
 
 function final(c) {
     console.log("ok"+c);
@@ -118,3 +132,13 @@ function convertoword(letter){
     if(letter == 's') return "Scissor";
 }
 
+modes.addEventListener('click', () => {
+    if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        modes.innerHTML = '<div  class="bg-gray-700 absolute shadow-md  bottom-10 md:bottom-auto right-10 right- md:right-0 md:top-0 rounded-full p-2 md:m-7"> <img src="./images/moon_light.png" alt=""></div>';
+    }
+    else {
+        document.documentElement.classList.add('dark');
+        modes.innerHTML = '<div class="bg-white shadow-md absolute bottom-10 md:bottom-auto right-10 right- md:right-0 md:top-0 rounded-full p-2 md:m-7 "><img src="./images/moon_dark.png" alt=""></div>';
+    }
+})

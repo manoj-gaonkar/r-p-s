@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -18,31 +19,47 @@
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        .choice{
+            @apply bg-clifford bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-100 dark:hover:text-gray-700 text-purple-500 dark:text-purple-200 hover:text-gray-900  hover:bg-transparent ease-in-out my-1 w-full text-center flex justify-center px-6 py-4;
+        }
+    </style>
     <title>rock paper scissors</title>
 </head>
 
-<body id="body">
-    <header>
-        <h2 class="result font-bold text-2xl uppercase text-white p-10">rock paper scissors</h2>
+<body id="body relative transition-all duration-50 ease-in-out" class="bg-gray-50 dark:bg-gray-900">
+    <header class=" ">
+        <div id="mode" class="">
+            <div class="bg-gray-700 shadow-md  absolute bottom-10 md:bottom-auto right-10 right- md:right-0 md:top-0 rounded-full p-2 md:m-7">
+                <img src="./images/moon_light.png" alt="">
+            </div>
+        </div>
+
+        <h2 class="result font-bold text-xl md:text-2xl uppercase dark:text-gray-50 p-10 text-gray-800">rock paper
+            scissors</h2>
     </header>
     <div class="score-board rounded-lg ">
         <p class="badge bg-purple-400 rounded-lg font-bold uppercase text-xs text-black" id="user-label">user</p>
         <p class="badge bg-purple-400 rounded-lg font-bold uppercase text-xs text-black" id="computer-label">comp</p>
-        <span class="user-score font-bold">0</span>:<span class="computer-score font-bold">0</span>
+        <span class="user-score font-bold text-gray-800 dark:text-gray-50">0</span> <span
+            class="text-gray-800 dark:text-gray-50">:</span> <span
+            class="computer-score font-bold text-gray-800 dark:text-gray-50">0</span>
     </div>
-    <h2 class="winner">Papers covers rock. You win!</h2>
-    <div class="selection mx-64 text-center">
-        <div class="choice bg-clifford text-purple-200 hover:text-gray-900 ease-in-out my-1 " id="r">
-            <h4 class="rock uppercase font-bold text-xl ">rock</h4>
+    <h2 class="winner text-gray-700 dark:text-gray-50">Papers covers rock. You win!</h2>
+    <div class="selection mx-24 md:mx-64 text-center flex flex-col justify-center items-center ">
+        <div class="choice " id="r">
+            <h4 class="rock uppercase font-bold text-sm md:text-xl  px-3 w-40">rock</h4>
         </div>
-        <div class="choice bg-clifford text-purple-200 hover:text-gray-900 ease-in-out my-1  " id="p">
-            <h4 class="paper uppercase font-bold text-xl ">paper</h4>
+        <div class="choice " id="p">
+            <h4 class="paper uppercase font-bold text-sm md:text-xl  w-40 ">paper</h4>
         </div>
-        <div class="choice bg-clifford text-purple-200 hover:text-gray-900 ease-in-out my-1  " id="s">
-            <h4 class="scissor uppercase font-bold text-xl ">scissor</h4>
+        <div class="choice " id="s">
+            <h4 class="scissor uppercase font-bold text-sm md:text-xl w-fit">scissor</h4>
         </div>
     </div>
-    <p class="make-move uppercase mt-24 text-sm opacity-50 text-white  blur-0 hover:blur-2xl trasition-all duration-500 ease-in-out  select-none">Make Your Move</p>
+    <p
+        class="make-move uppercase mt-24 text-sm opacity-50 text-black dark:text-white  blur-0 hover:blur-2xl trasition-all duration-500 ease-in-out  select-none">
+        Make Your Move</p>
     <script src="./app.js"></script>
 </body>
 

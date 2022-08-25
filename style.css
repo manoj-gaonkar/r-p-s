@@ -68,9 +68,7 @@ header > h2{
 }
 
 .choice{
-    color: rgb(45, 29, 66);
     /* background: rgba(255, 255, 255, 0.353); */
-    padding:1rem 4rem;
     border-radius:4px;
     transition: 0.3s ;
     transform: scale(1);
@@ -79,9 +77,9 @@ header > h2{
 }
 
 .choice:hover{
-    background: rgb(255, 255, 255);
+    /* background: rgb(185, 185, 185); */
     color: rgb(39, 25, 63);
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.116) ;
+    /* box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.116) ; */
     transform: scale(1.05);
 }
 
@@ -97,7 +95,7 @@ header > h2{
 
 .normal-fade{
     border: rgb(110, 197, 255) solid ;
-    transition: 1s all;
+    transition: 0.5s all;
 }
 
 
