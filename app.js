@@ -77,6 +77,8 @@ function win(userChoice,ComputerChoice){
     ScoreBoard.classList.add("normal-fade");
     if (userScore == 10) {
         final("u");
+        userlabel.classList.add("bg-green-300");
+        window.setTimeout(labelcolor, 1000);
     }
 }
 
@@ -88,22 +90,25 @@ function lose(userChoice,ComputerChoice){
     result_div.innerHTML = convertoword(userChoice)  + " beats " + convertoword(ComputerChoice) + ". You lose";
     ScoreBoard.style.border = "#d90d0d solid";
     // label color changing
-    window.setTimeout(labelcolor, 3000);
     if (computerScore == 10) {
         final("c");
+        computerlabel.classList.add("bg-green-300");
+        window.setTimeout(labelcolor, 1000);
+
+
     }
 }
 
 function labelcolor() {
-    computerlabel.classList.add("bg-red-500");
+    computerlabel.classList.remove("bg-green-300");
+    userlabel.classList.remove("bg-green-300");
+
 }
 
 function draw(userChoice,ComputerChoice){
     console.log (" ok you go");
     result_div.innerHTML = convertoword(userChoice) + " beats " + convertoword(ComputerChoice) + ". Its a Draw";
     ScoreBoard.style.border = "#f2cb1b solid";
-    userlabel.classList.add('bg-purple-400')
-    computerlabel.classList.add("bg-purple-400");
 }
  
 
