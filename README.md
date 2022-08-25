@@ -4,9 +4,9 @@
 
 <h3>Dark Mode</h3>
 <br>
-<img src="./images/moon_dark.png" alt="">
+<img src="./images/screen_dark.png" alt="">
 <br>
 <br>
 <h3>Light Mode</h3>
 <br>
-<img src="./images/moon_light.png" alt="">
+<img src="./images/screen_light.png" alt="">
