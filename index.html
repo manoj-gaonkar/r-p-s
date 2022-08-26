@@ -5,20 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/hexagon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: 'rgba(255, 254, 254, 0.323)',
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="./app.js" type="text/tailwindcss"></script>
     <style type="text/tailwindcss">
         .choice{
             @apply bg-clifford bg-gray-300 dark:bg-gray-700 sm:dark:hover:bg-gray-100 sm:dark:hover:text-gray-700 text-purple-500 dark:text-purple-200 sm:hover:text-gray-900  sm:hover:bg-transparent ease-in-out my-1 w-full text-center flex justify-center px-6 py-4;
@@ -27,11 +17,11 @@
     <title>rock paper scissors</title>
 </head>
 
-<body id="body relative transition-all duration-50 ease-in-out" class="bg-gray-50 dark:bg-gray-900">
+<body id="body relative transition-all duration-50 ease-in-out overflow-x-hidden" class="bg-gray-50 dark:bg-gray-900">
     <header class=" ">
         <div id="mode" class="">
             <div class="bg-gray-700 shadow-md  absolute bottom-10 md:bottom-auto right-10 right- md:right-0 md:top-0 rounded-full p-2 md:m-7">
-                <img src="./images/moon_light.png" alt="">
+                <img src="./images/moon_light.png" alt="" >
             </div>
         </div>
 
@@ -58,7 +48,7 @@
         </div>
     </div>
     <p
-        class="make-move uppercase mt-24 text-sm opacity-50 text-black dark:text-white  blur-0 hover:blur-2xl trasition-all duration-500 ease-in-out  select-none">
+        class="animate-pulse py-4  make-move uppercase mt-24 text-sm opacity-100 text-black dark:text-white  blur-0 hover:blur-2xl trasition-all duration-500 ease-in-out  select-none">
         Make Your Move</p>
     <script src="./app.js"></script>
 </body>

@@ -1,3 +1,43 @@
+/* tailwind css begin */
+tailwind.config = {
+
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                clifford: 'rgba(255, 254, 254, 0.323)',
+            }
+        }
+
+        ,
+        keyframes: {
+            bounce: {
+                '0%, 100%': {
+                    transform: 'translateY(-35%)',
+                    animationTimingFunction: 'cubic-bezier(0.8,0,1,1)'
+                },
+            },
+            pulse: {
+                '0%,100%': {
+                    color : '#8d6eff',
+                },
+                '50%': {
+                    opacity: '.2',
+                    color: 'white',
+                    transform: 'translateY(-35%)'
+                },
+            }
+        },
+        animation: {
+            bounce: 'bounce 1s infinite',
+            pulse: 'pulse 2s cubic-bezier(.67,-0.02,.22,.97) infinite',
+        
+            
+    },
+    }
+}
+
+
 var userScore = 0;
 var computerScore = 0;
 const userScore_span = document.querySelector(".user-score");
